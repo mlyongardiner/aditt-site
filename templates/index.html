@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditt - Get Paid to Watch Ads</title>
+    
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row hero-content align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="hero-split">
+                        <h2>Get Paid to Watch Ads</h2>
+                        <p class="lead">Turn your screen time into real money. Watch targeted ads and earn rewards instantly.</p>
+                        <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a" alt="Mobile Payment" class="img-fluid rounded mb-3">
+                        <a href="#" class="btn btn-light btn-lg">Download App</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="hero-split">
+                        <h2>Reach Engaged Audiences</h2>
+                        <p class="lead">Connect with users who are genuinely interested in your content. Get real insights and engagement.</p>
+                        <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07" alt="Digital Advertising" class="img-fluid rounded mb-3">
+                        <a href="#" class="btn btn-light btn-lg">Advertiser Portal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="text-center mb-5">How It Works</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i data-feather="play-circle" class="mb-3"></i>
+                        <h3>Watch Videos</h3>
+                        <p>Engage with targeted content from brands you're interested in.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i data-feather="check-circle" class="mb-3"></i>
+                        <h3>Verify Engagement</h3>
+                        <p>Answer simple questions to confirm your attention and understanding.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i data-feather="dollar-sign" class="mb-3"></i>
+                        <h3>Get Paid</h3>
+                        <p>Earn real money directly to your wallet. Cash out anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Calculate Your Earnings</h2>
+                    <div class="calculator-widget">
+                        <div class="form-group mb-4">
+                            <label for="hoursSlider">Hours per week watching ads:</label>
+                            <input type="range" class="form-range" id="hoursSlider" min="1" max="20" value="5">
+                            <div class="text-center mt-3">
+                                <span id="rateDisplay">5</span> hours = $<span id="totalEarnings">75</span> per week
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1522125670776-3c7abb882bc2" alt="Mobile Payment" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="trust-signals py-5">
+        <div class="container">
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <img src="https://stripe.com/img/v3/home/twitter.svg" alt="Stripe" height="30">
+                    <span>Secure Payments</span>
+                </div>
+                <div class="trust-badge">
+                    <i data-feather="shield" class="me-2"></i>
+                    <span>GDPR Compliant</span>
+                </div>
+                <div class="trust-badge">
+                    <i data-feather="lock" class="me-2"></i>
+                    <span>End-to-End Encryption</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
