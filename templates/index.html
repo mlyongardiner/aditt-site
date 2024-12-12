@@ -52,19 +52,26 @@
                         <p class="lead">Turn your screen time into real money. Watch targeted ads and earn rewards instantly.</p>
                         <div class="features-preview mb-4">
                             <div class="feature-item">
-                                <i data-feather="check-circle"></i>
-                                <span>Earn up to $15/hour</span>
+                                <i data-feather="dollar-sign"></i>
+                                <span>Earn 1x rewards as free user, 3x as premium</span>
                             </div>
                             <div class="feature-item">
                                 <i data-feather="check-circle"></i>
-                                <span>Instant Payouts</span>
+                                <span>Instant payouts via Stripe</span>
                             </div>
                             <div class="feature-item">
-                                <i data-feather="check-circle"></i>
-                                <span>Choose Your Content</span>
+                                <i data-feather="tag"></i>
+                                <span>Choose your interest categories</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-feather="shield"></i>
+                                <span>Secure identity verification</span>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-light btn-lg">Download App</a>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-light btn-lg">Download App</a>
+                            <a href="#premium" class="btn btn-outline-light btn-lg">Go Premium</a>
+                        </div>
                         <small class="d-block mt-2">Available on iOS & Android</small>
                     </div>
                 </div>
@@ -75,20 +82,27 @@
                         <p class="lead">Connect with users who are genuinely interested in your content. Get real insights and engagement.</p>
                         <div class="features-preview mb-4">
                             <div class="feature-item">
-                                <i data-feather="check-circle"></i>
-                                <span>Verified Engagement</span>
+                                <i data-feather="users"></i>
+                                <span>Target by demographics & interests</span>
                             </div>
                             <div class="feature-item">
-                                <i data-feather="check-circle"></i>
-                                <span>Detailed Analytics</span>
+                                <i data-feather="bar-chart-2"></i>
+                                <span>Real-time engagement analytics</span>
                             </div>
                             <div class="feature-item">
-                                <i data-feather="check-circle"></i>
-                                <span>Target by Interest</span>
+                                <i data-feather="check-square"></i>
+                                <span>Verified user interactions</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-feather="trending-up"></i>
+                                <span>Conversion tracking</span>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-light btn-lg">Start Advertising</a>
-                        <small class="d-block mt-2">No minimum budget required</small>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-light btn-lg">Start Advertising</a>
+                            <a href="#demo" class="btn btn-outline-light btn-lg">Request Demo</a>
+                        </div>
+                        <small class="d-block mt-2">Simple business verification process</small>
                     </div>
                 </div>
             </div>
@@ -206,6 +220,71 @@
                     <div class="calculator-widget">
                         <div class="form-group mb-4">
                             <label for="hoursSlider">Hours per week watching ads:</label>
+    <!-- Premium Features -->
+    <section class="premium bg-light py-5" id="premium">
+        <div class="container">
+            <h2 class="text-center mb-5">Unlock Premium Benefits</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Free User</h3>
+                            <ul class="list-unstyled">
+                                <li><i data-feather="check" class="text-success me-2"></i>Basic earnings (1x rewards)</li>
+                                <li><i data-feather="check" class="text-success me-2"></i>Standard content access</li>
+                                <li><i data-feather="check" class="text-success me-2"></i>Basic analytics</li>
+                            </ul>
+                            <p class="text-muted">Perfect for trying out the platform</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-primary">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary">Premium User</h3>
+                            <ul class="list-unstyled">
+                                <li><i data-feather="check" class="text-primary me-2"></i>3x reward multiplier</li>
+                                <li><i data-feather="check" class="text-primary me-2"></i>Priority content access</li>
+                                <li><i data-feather="check" class="text-primary me-2"></i>Detailed engagement stats</li>
+                                <li><i data-feather="check" class="text-primary me-2"></i>Exclusive advertiser offers</li>
+                            </ul>
+                            <p class="text-muted">Unlock by referring friends or subscribing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy & Security -->
+    <section class="privacy py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Your Privacy & Security</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i data-feather="shield" class="mb-3" style="width: 48px; height: 48px;"></i>
+                        <h3>Secure Verification</h3>
+                        <p>Identity verification through secure channels while maintaining privacy</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i data-feather="lock" class="mb-3" style="width: 48px; height: 48px;"></i>
+                        <h3>Data Protection</h3>
+                        <p>GDPR and CCPA compliant with end-to-end encryption</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i data-feather="eye-off" class="mb-3" style="width: 48px; height: 48px;"></i>
+                        <h3>Privacy Control</h3>
+                        <p>You control what information advertisers can see</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
                             <input type="range" class="form-range" id="hoursSlider" min="1" max="20" value="5">
                             <div class="text-center mt-3">
                                 <span id="rateDisplay">5</span> hours = $<span id="totalEarnings">75</span> per week
