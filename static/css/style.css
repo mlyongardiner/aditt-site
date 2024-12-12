@@ -516,6 +516,147 @@ body {
     color: var(--text-color);
     font-weight: 500;
 }
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+    color: white;
+    padding: 80px 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.hero .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-cta .btn {
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #4A90E2;
+    border: none;
+}
+
+.btn-outline-primary {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-primary:hover {
+    background-color: white;
+    color: #4A90E2;
+}
+
+/* Calculator Section Styles */
+.earnings-calculator {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.calculator-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.calculator-input {
+    margin-bottom: 2rem;
+}
+
+.calculator-input label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.form-range {
+    height: 6px;
+}
+
+.form-range::-webkit-slider-thumb {
+    background: #4A90E2;
+}
+
+.earnings-display {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tier-earnings {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.tier-earnings.premium {
+    background: #4A90E2;
+    color: white;
+}
+
+.tier-earnings h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.tier-earnings p {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.tier-earnings span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.earnings-info {
+    padding: 2rem;
+}
+
+.earnings-info h3 {
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    color: #333;
+}
+
+.earnings-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.earnings-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.earnings-benefits li i {
+    color: #4A90E2;
+}
+
 .stripe-badge {
     background: white;
     border-radius: 4px;
