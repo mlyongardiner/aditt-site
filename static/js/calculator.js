@@ -20,15 +20,15 @@ class EarningsCalculator {
         
         // Animate the numbers
         gsap.to(this.rateDisplay, {
-            innerText: hours,
+            textContent: hours,
             duration: 0.3,
-            snap: { innerText: 1 }
+            snap: { textContent: 1 }
         });
         
         gsap.to(this.totalEarnings, {
-            innerText: earnings,
+            textContent: earnings,
             duration: 0.3,
-            snap: { innerText: 1 }
+            snap: { textContent: 1 }
         });
     }
 }
