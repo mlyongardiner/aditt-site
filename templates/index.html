@@ -31,6 +31,9 @@
                         <a class="nav-link" href="#calculator">Earnings</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#premium">Premium</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link btn btn-outline-light ms-2" href="#">Download App</a>
                     </li>
                     <li class="nav-item">
@@ -139,6 +142,59 @@
         </div>
     </section>
 
+    <!-- Onboarding Section -->
+    <section class="onboarding bg-light py-5" id="onboarding">
+        <div class="container">
+            <h2 class="text-center mb-5">Getting Started is Easy</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="steps-container">
+                        <div class="step-item d-flex align-items-start mb-4">
+                            <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">1</div>
+                            <div>
+                                <h4>Download & Sign Up</h4>
+                                <p>Create your account with basic information and verify your identity securely.</p>
+                            </div>
+                        </div>
+                        <div class="step-item d-flex align-items-start mb-4">
+                            <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">2</div>
+                            <div>
+                                <h4>Select Your Interests</h4>
+                                <p>Choose categories that matter to you for personalized content:</p>
+                                <div class="interest-tags d-flex flex-wrap gap-2 mt-2">
+                                    <span class="badge bg-primary">Technology</span>
+                                    <span class="badge bg-primary">Fashion</span>
+                                    <span class="badge bg-primary">Food</span>
+                                    <span class="badge bg-primary">Travel</span>
+                                    <span class="badge bg-primary">Gaming</span>
+                                    <span class="badge bg-primary">More...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-item d-flex align-items-start">
+                            <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">3</div>
+                            <div>
+                                <h4>Start Earning</h4>
+                                <p>Watch videos, engage with content, and earn rewards instantly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-demo border rounded-3 bg-white p-3">
+                        <div class="ratio ratio-16x9">
+                            <img src="https://placehold.co/600x400/4A90E2/FFFFFF/png?text=App+Demo+Video" class="rounded" alt="App Demo">
+                        </div>
+                        <p class="text-center mt-3 mb-0">
+                            <i data-feather="play-circle" class="me-2"></i>
+                            Watch how it works
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Calculator Section -->
     <section class="calculator" id="calculator">
         <div class="container">
@@ -162,64 +218,6 @@
         </div>
     </section>
 
-    <!-- Trust Signals -->
-    <section class="trust-signals py-5">
-        <div class="container">
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <img src="https://stripe.com/img/v3/home/twitter.svg" alt="Stripe" height="30">
-                    <span>Secure Payments</span>
-                </div>
-                <div class="trust-badge">
-                    <i data-feather="shield" class="me-2"></i>
-                    <span>GDPR Compliant</span>
-                </div>
-                <div class="trust-badge">
-                    <i data-feather="lock" class="me-2"></i>
-                    <span>End-to-End Encryption</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="text-center mb-5">How It Works</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="feature-card">
-                        <i data-feather="play-circle" class="mb-3"></i>
-                        <h3>Watch Videos</h3>
-                        <p>Engage with targeted content from brands you're interested in.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-card">
-                        <i data-feather="check-circle" class="mb-3"></i>
-                        <h3>Verify Engagement</h3>
-                        <p>Answer simple questions to confirm your attention and understanding.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-card">
-                        <i data-feather="dollar-sign" class="mb-3"></i>
-                        <h3>Get Paid</h3>
-                        <p>Earn real money directly to your wallet. Cash out anytime.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calculator Section -->
-    <section class="calculator" id="calculator">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2>Calculate Your Earnings</h2>
-                    <div class="calculator-widget">
-                        <div class="form-group mb-4">
-                            <label for="hoursSlider">Hours per week watching ads:</label>
     <!-- Premium Features -->
     <section class="premium bg-light py-5" id="premium">
         <div class="container">
@@ -281,19 +279,6 @@
                         <h3>Privacy Control</h3>
                         <p>You control what information advertisers can see</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-                            <input type="range" class="form-range" id="hoursSlider" min="1" max="20" value="5">
-                            <div class="text-center mt-3">
-                                <span id="rateDisplay">5</span> hours = $<span id="totalEarnings">75</span> per week
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1522125670776-3c7abb882bc2" alt="Mobile Payment" class="img-fluid rounded">
                 </div>
             </div>
         </div>
