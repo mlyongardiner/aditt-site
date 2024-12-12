@@ -145,17 +145,30 @@
                     <h2>Calculate Your Earnings</h2>
                     <div class="calculator-widget">
                         <div class="form-group mb-4">
-                            <label for="userType" class="form-label">Select user type:</label>
-                            <select class="form-select mb-3" id="userType">
-                                <option value="free">Free User (1x rewards)</option>
-                                <option value="premium">Premium User (3x rewards)</option>
-                            </select>
                             <label for="hoursSlider" class="form-label">Hours per week watching ads:</label>
                             <input type="range" class="form-range" id="hoursSlider" min="1" max="20" value="5">
-                            <div class="text-center mt-3">
-                                <span id="rateDisplay">5</span> hours = <span id="totalEarnings">$75</span> per week
+                            <div class="earnings-comparison mt-3">
+                                <div class="row text-center">
+                                    <div class="col-6">
+                                        <div class="earnings-box free">
+                                            <h6 class="mb-2">Free User</h6>
+                                            <span id="freeEarnings" class="earnings-amount">$25</span>
+                                            <small class="d-block text-muted">per week</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="earnings-box premium">
+                                            <h6 class="mb-2">Premium User</h6>
+                                            <span id="premiumEarnings" class="earnings-amount">$75</span>
+                                            <small class="d-block text-muted">per week</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <span id="rateDisplay">5</span> hours per week
+                                </div>
                             </div>
-                            <p class="text-muted mt-2 small">Slide to adjust hours and see your potential earnings</p>
+                            <p class="text-muted mt-3 small text-center">Slide to adjust hours and see your potential earnings</p>
                         </div>
                     </div>
                 </div>

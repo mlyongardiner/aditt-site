@@ -2,8 +2,8 @@ class EarningsCalculator {
     constructor() {
         this.hoursSlider = document.getElementById('hoursSlider');
         this.rateDisplay = document.getElementById('rateDisplay');
-        this.totalEarnings = document.getElementById('totalEarnings');
-        this.userTypeSelect = document.getElementById('userType');
+        this.freeEarnings = document.getElementById('freeEarnings');
+        this.premiumEarnings = document.getElementById('premiumEarnings');
         this.ratePerHour = {
             free: 5,     // $5 per hour for free users
             premium: 15   // $15 per hour for premium users
@@ -12,18 +12,16 @@ class EarningsCalculator {
     }
 
     initialize() {
-        if (!this.hoursSlider || !this.userTypeSelect) return;
+        if (!this.hoursSlider) return;
         
         this.hoursSlider.addEventListener('input', () => this.calculateEarnings());
-        this.userTypeSelect.addEventListener('change', () => this.calculateEarnings());
         this.calculateEarnings();
     }
 
     calculateEarnings() {
         const hours = parseInt(this.hoursSlider.value);
-        const userType = this.userTypeSelect.value;
-        const rate = this.ratePerHour[userType];
-        const earnings = hours * rate;
+        const freeEarnings = hours * this.ratePerHour.free;
+        const premiumEarnings = hours * this.ratePerHour.premium;
         
         // Animate the numbers with GSAP
         gsap.to(this.rateDisplay, {
@@ -32,16 +30,27 @@ class EarningsCalculator {
             snap: { textContent: 1 }
         });
         
-        gsap.to(this.totalEarnings, {
-            textContent: earnings,
+        gsap.to(this.freeEarnings, {
+            textContent: freeEarnings,
             duration: 0.3,
             snap: { textContent: 1 },
             onComplete: () => {
-                // Add currency formatting
-                this.totalEarnings.textContent = new Intl.NumberFormat('en-US', {
+                this.freeEarnings.textContent = new Intl.NumberFormat('en-US', {
                     style: 'currency',
                     currency: 'USD'
-                }).format(earnings);
+                }).format(freeEarnings);
+            }
+        });
+
+        gsap.to(this.premiumEarnings, {
+            textContent: premiumEarnings,
+            duration: 0.3,
+            snap: { textContent: 1 },
+            onComplete: () => {
+                this.premiumEarnings.textContent = new Intl.NumberFormat('en-US', {
+                    style: 'currency',
+                    currency: 'USD'
+                }).format(premiumEarnings);
             }
         });
     }
