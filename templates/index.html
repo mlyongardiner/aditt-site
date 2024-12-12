@@ -305,11 +305,32 @@
     <!-- Trust Signals -->
     <section class="trust-signals py-5">
         <div class="container">
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <img src="https://stripe.com/img/v3/home/twitter.svg" alt="Stripe" height="30">
-                    <span>Secure Payments</span>
+            <h2 class="text-center mb-5">Your Privacy & Security</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i data-feather="shield" class="mb-3" style="width: 48px; height: 48px;"></i>
+                        <h3>Secure Verification</h3>
+                        <p>Identity verification through secure channels while maintaining privacy</p>
+                    </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i data-feather="lock" class="mb-3" style="width: 48px; height: 48px;"></i>
+                        <h3>Data Protection</h3>
+                        <p>GDPR and CCPA compliant with end-to-end encryption</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i data-feather="eye-off" class="mb-3" style="width: 48px; height: 48px;"></i>
+                        <h3>Privacy Control</h3>
+                        <p>You control what information advertisers can see</p>
+                    </div>
+                </div>
+            </div>
+            <div class="trust-badges mt-5">
+                <img src="{{ url_for('static', filename='images/stripe-secure.svg') }}" alt="Stripe Secure Payments">
                 <div class="trust-badge">
                     <i data-feather="shield" class="me-2"></i>
                     <span>GDPR Compliant</span>

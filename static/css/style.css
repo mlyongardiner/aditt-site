@@ -136,18 +136,42 @@ body {
 }
 
 /* Trust Signals */
+.trust-signals {
+    background: var(--light);
+}
+
+.trust-signals i {
+    color: var(--primary-color);
+}
+
+.trust-signals h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 .trust-badges {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
     margin: 2rem 0;
+    flex-wrap: wrap;
 }
 
 .trust-badge {
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     background: white;
     border-radius: 0.5rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.trust-badge i {
+    width: 20px;
+    height: 20px;
 }
 
 /* Animations */
