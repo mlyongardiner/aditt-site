@@ -521,112 +521,142 @@ body {
 .hero {
     background: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
     color: white;
-    padding: 80px 0;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero h1 {
     font-size: 3.5rem;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 1.5rem;
-    color: white;
+    line-height: 1.2;
 }
 
 .hero .lead {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    line-height: 1.6;
 }
 
 .hero-cta {
     display: flex;
-    gap: 1rem;
+    gap: 1.25rem;
+    align-items: center;
 }
 
 .hero-cta .btn {
-    padding: 0.75rem 2rem;
-    font-weight: 500;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .btn-primary {
     background-color: #4A90E2;
     border: none;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(74, 144, 226, 0.4);
 }
 
 .btn-outline-primary {
-    border-color: white;
+    border: 2px solid rgba(255, 255, 255, 0.9);
     color: white;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .btn-outline-primary:hover {
     background-color: white;
     color: #4A90E2;
+    transform: translateY(-2px);
 }
 
 /* Calculator Section Styles */
 .earnings-calculator {
     background-color: #f8f9fa;
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .calculator-card {
     background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 .calculator-input {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .calculator-input label {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1.25rem;
     display: block;
+    font-weight: 500;
 }
 
 .form-range {
-    height: 6px;
+    height: 8px;
+    border-radius: 4px;
+    background: #e9ecef;
 }
 
 .form-range::-webkit-slider-thumb {
     background: #4A90E2;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(74, 144, 226, 0.3);
 }
 
 .earnings-display {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .tier-earnings {
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 2rem;
+    border-radius: 12px;
     background: #f8f9fa;
+    transition: transform 0.3s ease;
+}
+
+.tier-earnings:hover {
+    transform: translateY(-4px);
 }
 
 .tier-earnings.premium {
-    background: #4A90E2;
+    background: linear-gradient(135deg, #4A90E2 0%, #5C6BC0 100%);
     color: white;
+    box-shadow: 0 8px 24px rgba(74, 144, 226, 0.2);
 }
 
 .tier-earnings h4 {
-    margin-bottom: 1rem;
-    font-weight: 600;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .tier-earnings p {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .tier-earnings span {
-    font-weight: bold;
-    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: inherit;
 }
 
 .earnings-info {
