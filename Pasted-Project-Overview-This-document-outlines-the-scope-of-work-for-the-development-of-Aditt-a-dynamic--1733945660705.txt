@@ -1,0 +1,122 @@
+Project Overview: 
+This document outlines the scope of work for the development of Aditt, a dynamic engagement-based mobile and web platform that rewards users for viewing and interacting with targeted advertisements. The app aims to bridge advertisers with directly engaged audiences while providing users with financial incentives for their attention and participation.
+Problem Statement:
+Advertisers face challenges in ensuring meaningful engagement and data collection from their audience. Similarly, users often feel unrewarded for the time spent consuming digital advertisements.
+Solution Statement:
+Aditt incentivizes users to engage with advertisements by offering monetary rewards for verified interactions. Advertisers benefit from deeper audience insights and guaranteed user attention, creating a win-win scenario.
+Application Type:
+Mobile Application: iOS, Android
+Web Application: Portal for advertisers
+Commercialization Model:
+Freemium:
+Free user access with monetization through partnerships and ad placements.
+Advertisers pay for engagement-based campaigns.
+Utilize Stripe Connect for both advertisers (ACH charge) and user payout (regular payout)
+User Types & Features:
+End User (Consumers):
+Sign-Up/Login:
+Identifiable for Aditt: Required Information: Name, Username, Phone, Email, Password, Date of Birth, and Identity Verification. 
+Non-identifiable for Advertiser: Gender, Location, age, and other demographic targeting info.
+Optional Information: Profile Picture with animated defaults.
+Save Face ID for quicker login.
+Onboarding:
+Some explanation of Aditt with option to not show again - overlay, video, TBD
+Interest category selection
+Home Screen:
+Always-on wallet display of how much the user has earned but not paid out.
+Home screen should jump right into videos (TikTok)
+Search Page: 
+Dynamic thumbnails displaying video content based on user interests.
+Metrics like video length and earnings ($) displayed.
+Engagement Screen:
+Video interaction options: Bookmark, Like, Share, Link Click.
+Penalty mechanisms for incomplete engagement, pause before answers show.
+Verification & Survey:
+Post-video quiz to verify engagement.
+Customized advertiser survey for additional insights.
+Wallet Integration:
+Track earnings, withdraw funds via Stripe, or donate to charity.
+Incentivize spending rewards on advertiser products via simple discount code/link to advertisers product.
+Freemium workflow
+Not signed up: Browse
+Signed up: Earn “1x”
+Premium:
+Refer X friends
+Pay monthly subscription
+Earn 3x
+Advertisers:
+Profile Management:
+Sign-Up/Login with minimal information (e.g., Name, Email, business, website).
+Optional brand details: Logo.
+Must verify business email
+Campaign Management:
+Upload content, set budgets, and target audience based on demographics, interests, or location.
+Design test questions and survey forms.
+Payment gateway for funding campaigns.
+Conversion Tracking solution: validate in discovery phase
+Insert UTM'd links for their internal tracking - needs to inject into our portal.
+Have the advertisers invite Aditt to have limited access to their ad portals.
+Google Tag Manager tracking - the key is to internally track the final results/engagement. UTM links only work if the advertiser uploads their data post-campaign.
+Need dev effort estimate from Synergy team
+Analytics Dashboard:
+Metrics on engagement, quiz accuracy, survey results, and conversions.
+Table + filter
+Visual insights: graphs and charts for campaign performance. (nice to have)
+Form for collecting assessment of advertiser performance (incentivize via ad credits)
+Only necessary if we go the UTM route
+Aditt Admin Panel:
+User and advertiser account management.
+Campaign moderation and (video/ad) approval.
+Analytics monitoring and financial reconciliation.
+Video approval
+We’d love to know from the Synergy team what the dev effort would be to implement AI / automated video approval processing.
+​
+Modules & Application Services:
+Frontend Modules:
+User Interface (UI):
+Intuitive design for video engagement and wallet interactions.
+Advertiser Portal:
+Simplified campaign creation and analytics visualization.
+Home & Engagement Screens:
+Dynamic feeds personalized to user preferences.
+Backend Modules:
+Database Management:
+Secure storage of user data, transactions, and advertiser content.
+API Integration:
+Plaid for payment
+Stripe (Connect Accounts) for payments and payouts
+AI for recommendation algorithms.
+Need to determine what exactly is training the SLM.
+Hard-coded algorithm for showing videos to users. Highest match based on demographic information, tailored towards advertiser success (not user interest).
+Gender
+Age
+Location
+Interests/Tags
+We don’t need an API for a self-learning model for MVP, but we do need the infrastructure in place to begin capturing necessary learning materials.
+Analytics & Notifications:
+Analytics Module:
+Real-time engagement tracking for advertisers.
+Notification System:
+Push notifications and in-app alerts.
+Development Approach:
+Agile Methodology: Regular feedback loops with iterative releases.
+MVP Focus:
+Core features in the initial release.
+Advanced analytics and enhanced engagement options in later phases.
+Security & Compliance:
+Data Privacy: Adherence to GDPR and CCPA regulations.
+Encryption: End-to-end encryption for user data.
+Verification: Identity confirmation via secure upload systems.
+How do we connect business email verification and DBA (doing business as)?
+Deliverables:
+End of Discovery:
+Developer-ready Figma file with clickable prototype
+Client-facing iOS app
+Advertiser-facing Web app
+Finalized SOW for development
+End of Development:
+Fully functional mobile app for iOS and Android.
+Web portal for advertisers.
+Source code and technical documentation.
+Admin training and user guides.
+Website Landing page for App
