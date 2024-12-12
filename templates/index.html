@@ -12,24 +12,83 @@
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i data-feather="play-circle" class="me-2"></i>
+                Aditt
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#calculator">Earnings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light ms-2" href="#">Download App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light ms-2" href="#">Advertiser Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="row hero-content align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
                     <div class="hero-split">
-                        <h2>Get Paid to Watch Ads</h2>
+                        <span class="badge bg-light text-primary mb-3">For Users</span>
+                        <h1>Get Paid to Watch Ads</h1>
                         <p class="lead">Turn your screen time into real money. Watch targeted ads and earn rewards instantly.</p>
-                        <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a" alt="Mobile Payment" class="img-fluid rounded mb-3">
+                        <div class="features-preview mb-4">
+                            <div class="feature-item">
+                                <i data-feather="check-circle"></i>
+                                <span>Earn up to $15/hour</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-feather="check-circle"></i>
+                                <span>Instant Payouts</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-feather="check-circle"></i>
+                                <span>Choose Your Content</span>
+                            </div>
+                        </div>
                         <a href="#" class="btn btn-light btn-lg">Download App</a>
+                        <small class="d-block mt-2">Available on iOS & Android</small>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="hero-split">
+                        <span class="badge bg-light text-secondary mb-3">For Advertisers</span>
                         <h2>Reach Engaged Audiences</h2>
                         <p class="lead">Connect with users who are genuinely interested in your content. Get real insights and engagement.</p>
-                        <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07" alt="Digital Advertising" class="img-fluid rounded mb-3">
-                        <a href="#" class="btn btn-light btn-lg">Advertiser Portal</a>
+                        <div class="features-preview mb-4">
+                            <div class="feature-item">
+                                <i data-feather="check-circle"></i>
+                                <span>Verified Engagement</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-feather="check-circle"></i>
+                                <span>Detailed Analytics</span>
+                            </div>
+                            <div class="feature-item">
+                                <i data-feather="check-circle"></i>
+                                <span>Target by Interest</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-light btn-lg">Start Advertising</a>
+                        <small class="d-block mt-2">No minimum budget required</small>
                     </div>
                 </div>
             </div>
