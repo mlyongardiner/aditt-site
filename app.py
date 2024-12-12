@@ -23,8 +23,17 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 app.config.update(
     SEND_FILE_MAX_AGE_DEFAULT=0,
     TEMPLATES_AUTO_RELOAD=True,
-    SECRET_KEY=os.urandom(24)
+    SECRET_KEY=os.urandom(24),
+    DEBUG=True
 )
+
+# Enable CORS for development
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
 
 @app.route('/')
 def index():
