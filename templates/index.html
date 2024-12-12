@@ -145,11 +145,17 @@
                     <h2>Calculate Your Earnings</h2>
                     <div class="calculator-widget">
                         <div class="form-group mb-4">
-                            <label for="hoursSlider">Hours per week watching ads:</label>
+                            <label for="userType" class="form-label">Select user type:</label>
+                            <select class="form-select mb-3" id="userType">
+                                <option value="free">Free User (1x rewards)</option>
+                                <option value="premium">Premium User (3x rewards)</option>
+                            </select>
+                            <label for="hoursSlider" class="form-label">Hours per week watching ads:</label>
                             <input type="range" class="form-range" id="hoursSlider" min="1" max="20" value="5">
                             <div class="text-center mt-3">
-                                <span id="rateDisplay">5</span> hours = $<span id="totalEarnings">75</span> per week
+                                <span id="rateDisplay">5</span> hours = <span id="totalEarnings">$75</span> per week
                             </div>
+                            <p class="text-muted mt-2 small">Slide to adjust hours and see your potential earnings</p>
                         </div>
                     </div>
                 </div>
