@@ -419,3 +419,38 @@ body {
         margin-bottom: 2rem;
     }
 }
+/* Download App Section */
+.download-app {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
+    color: white;
+}
+
+.app-badges {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.app-badge {
+    transition: transform 0.3s ease;
+}
+
+.app-badge:hover {
+    transform: translateY(-5px);
+}
+
+.qr-section {
+    background: white;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.qr-code {
+    color: var(--primary-color);
+}
+
+.qr-code p {
+    color: var(--text-color);
+    font-weight: 500;
+}
