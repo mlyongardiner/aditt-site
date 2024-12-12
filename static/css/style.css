@@ -516,3 +516,16 @@ body {
     color: var(--text-color);
     font-weight: 500;
 }
+.stripe-badge {
+    background: white;
+    border-radius: 4px;
+    padding: 8px 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.stripe-badge img {
+    height: 32px;
+    width: auto;
+}
