@@ -389,6 +389,41 @@
         </div>
     </section>
     </section>
+    <!-- Interactive Platform Demo -->
+    <section class="platform-demo py-5" id="demo">
+        <div class="container">
+            <h2 class="text-center mb-5">Experience Engaging Content</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="demo-video-container">
+                        <div class="video-placeholder">
+                            <div class="interaction-overlay">
+                                <div class="interaction-buttons">
+                                    <button class="btn btn-light interaction-button" data-action="like">
+                                        <i data-feather="thumbs-up"></i>
+                                        Like
+                                    </button>
+                                    <button class="btn btn-light interaction-button" data-action="share">
+                                        <i data-feather="share-2"></i>
+                                        Share
+                                    </button>
+                                    <button class="btn btn-light interaction-button" data-action="bookmark">
+                                        <i data-feather="bookmark"></i>
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="verification-popup">
+                            <i data-feather="check-circle"></i>
+                            <h4>Engagement Verified!</h4>
+                            <p>You've earned rewards for your attention</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Onboarding Preview -->
     <section class="onboarding-preview py-5" id="onboarding">
         <div class="container">
@@ -488,6 +523,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
     <script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/tour.js') }}"></script>
     <script>
         feather.replace();
     </script>
