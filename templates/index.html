@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditt - Get Paid to Watch Ads</title>
-    <!-- Bootstrap CSS -->
+    <title>Aditt - Video Advertising Platform</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="#">
                 <i data-feather="play-circle" class="me-2"></i>
                 Aditt
             </a>
@@ -23,16 +21,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">How It Works</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#calculator">Earnings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light ms-2" href="#">Download App</a>
+                        <a class="nav-link" href="#demo">How It Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-light ms-2" href="#">Advertiser Login</a>
+                        <a class="nav-link" href="#download">Download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Advertiser Login</a>
                     </li>
                 </ul>
             </div>
@@ -40,306 +38,54 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="row hero-content align-items-center">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <div class="hero-split">
-                        <span class="badge bg-light text-primary mb-3">For Users</span>
-                        <h1>Get Paid to Watch Ads</h1>
-                        <p class="lead">Turn your screen time into real money. Watch targeted ads and earn rewards instantly.</p>
-                        <div class="features-preview mb-4">
-                            <div class="feature-item">
-                                <i data-feather="dollar-sign"></i>
-                                <span>Earn 1x rewards as free user, 3x as premium</span>
-                            </div>
-                            <div class="feature-item">
-                                <i data-feather="check-circle"></i>
-                                <span>Instant payouts via Stripe</span>
-                            </div>
-                            <div class="feature-item">
-                                <i data-feather="tag"></i>
-                                <span>Choose your interest categories</span>
-                            </div>
-                            <div class="feature-item">
-                                <i data-feather="shield"></i>
-                                <span>Secure identity verification</span>
-                            </div>
-                        </div>
-                        <div class="d-flex gap-2">
-                            <a href="#" class="btn btn-light btn-lg">Download App</a>
-                            <a href="#premium" class="btn btn-outline-light btn-lg">Go Premium</a>
-                        </div>
-                        <small class="d-block mt-2">Available on iOS & Android</small>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="hero-split">
-                        <span class="badge bg-light text-secondary mb-3">For Advertisers</span>
-                        <h2>Reach Engaged Audiences</h2>
-                        <p class="lead">Connect with users who are genuinely interested in your content. Get real insights and engagement.</p>
-                        <div class="features-preview mb-4">
-                            <div class="feature-item">
-                                <i data-feather="users"></i>
-                                <span>Target by demographics & interests</span>
-                            </div>
-                            <div class="feature-item">
-                                <i data-feather="bar-chart-2"></i>
-                                <span>Real-time engagement analytics</span>
-                            </div>
-                            <div class="feature-item">
-                                <i data-feather="check-square"></i>
-                                <span>Verified user interactions</span>
-                            </div>
-                            <div class="feature-item">
-                                <i data-feather="trending-up"></i>
-                                <span>Conversion tracking</span>
-                            </div>
-                        </div>
-                        <div class="d-flex gap-2">
-                            <a href="#" class="btn btn-light btn-lg">Start Advertising</a>
-                            <a href="#demo" class="btn btn-outline-light btn-lg">Request Demo</a>
-                        </div>
-                        <small class="d-block mt-2">Simple business verification process</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="text-center mb-5">How It Works</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="feature-card">
-                        <i data-feather="play-circle" class="mb-3"></i>
-                        <h3>Watch Videos</h3>
-                        <p>Engage with targeted content from brands you're interested in.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-card">
-                        <i data-feather="check-circle" class="mb-3"></i>
-                        <h3>Verify Engagement</h3>
-                        <p>Answer simple questions to confirm your attention and understanding.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-card">
-                        <i data-feather="dollar-sign" class="mb-3"></i>
-                        <h3>Get Paid</h3>
-                        <p>Earn real money directly to your wallet. Cash out anytime.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calculator Section -->
-    <section class="calculator" id="calculator">
+    <section class="hero py-5 mt-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2>Calculate Your Earnings</h2>
-                    <div class="calculator-widget">
-                        <div class="form-group mb-4">
-                            <label for="hoursSlider" class="form-label">Hours per week watching ads:</label>
-                            <input type="range" class="form-range" id="hoursSlider" min="1" max="20" value="5">
-                            <div class="earnings-comparison mt-3">
-                                <div class="row text-center">
-                                    <div class="col-6">
-                                        <div class="earnings-box free">
-                                            <h6 class="mb-2">Free User</h6>
-                                            <span id="freeEarnings" class="earnings-amount">$25</span>
-                                            <small class="d-block text-muted">per week</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="earnings-box premium">
-                                            <h6 class="mb-2">Premium User</h6>
-                                            <span id="premiumEarnings" class="earnings-amount">$75</span>
-                                            <small class="d-block text-muted">per week</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-center mt-2">
-                                    <span id="rateDisplay">5</span> hours per week
-                                </div>
-                            </div>
-                            <p class="text-muted mt-3 small text-center">Slide to adjust hours and see your potential earnings</p>
-                        </div>
+                <div class="col-md-6 hero-split">
+                    <h1 class="mb-4">Get Paid for Your Attention</h1>
+                    <p class="lead mb-4">Watch targeted ads, engage meaningfully, and earn real money. Join thousands already monetizing their screen time.</p>
+                    <div class="cta-buttons">
+                        <a href="#calculator" class="btn btn-primary me-3">Calculate Earnings</a>
+                        <a href="#demo" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1522125670776-3c7abb882bc2" alt="Mobile Payment" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Premium Features -->
-    <section class="premium bg-light py-5" id="premium">
-        <div class="container">
-            <h2 class="text-center mb-5">Unlock Premium Benefits</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="card-title">Free User</h3>
-                            <ul class="list-unstyled">
-                                <li><i data-feather="check" class="text-success me-2"></i>Basic earnings (1x rewards)</li>
-                                <li><i data-feather="check" class="text-success me-2"></i>Standard content access</li>
-                                <li><i data-feather="check" class="text-success me-2"></i>Basic analytics</li>
-                            </ul>
-                            <p class="text-muted">Perfect for trying out the platform</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 border-primary">
-                        <div class="card-body">
-                            <h3 class="card-title text-primary">Premium User</h3>
-                            <ul class="list-unstyled">
-                                <li><i data-feather="check" class="text-primary me-2"></i>3x reward multiplier</li>
-                                <li><i data-feather="check" class="text-primary me-2"></i>Priority content access</li>
-                                <li><i data-feather="check" class="text-primary me-2"></i>Detailed engagement stats</li>
-                                <li><i data-feather="check" class="text-primary me-2"></i>Exclusive advertiser offers</li>
-                            </ul>
-                            <p class="text-muted">Unlock by referring friends or subscribing</p>
-                        </div>
+                <div class="col-md-6 hero-split">
+                    <div class="hero-image">
+                        <img src="{{ url_for('static', filename='images/wave.svg') }}" alt="Hero Wave" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Privacy & Security -->
-    <section class="privacy py-5">
+    <!-- Trust Badges -->
+    <section class="trust-section py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Your Privacy & Security</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="text-center">
-                        <i data-feather="shield" class="mb-3" style="width: 48px; height: 48px;"></i>
-                        <h3>Secure Verification</h3>
-                        <p>Identity verification through secure channels while maintaining privacy</p>
-                    </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <i data-feather="shield" class="trust-icon mb-3"></i>
+                    <h4>Secure Verification</h4>
+                    <p>Identity verification through secure channels while maintaining privacy</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="text-center">
-                        <i data-feather="lock" class="mb-3" style="width: 48px; height: 48px;"></i>
-                        <h3>Data Protection</h3>
-                        <p>GDPR and CCPA compliant with end-to-end encryption</p>
-                    </div>
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <i data-feather="lock" class="trust-icon mb-3"></i>
+                    <h4>Data Protection</h4>
+                    <p>GDPR and CCPA compliant with end-to-end encryption</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="text-center">
-                        <i data-feather="eye-off" class="mb-3" style="width: 48px; height: 48px;"></i>
-                        <h3>Privacy Control</h3>
-                        <p>You control what information advertisers can see</p>
-                    </div>
+                <div class="col-md-4 text-center">
+                    <i data-feather="eye-off" class="trust-icon mb-3"></i>
+                    <h4>Privacy Control</h4>
+                    <p>You control what information advertisers can see</p>
+                </div>
+            </div>
+            <div class="row mt-4 justify-content-center">
+                <div class="col-auto">
+                    <img src="{{ url_for('static', filename='images/stripe-secure.svg') }}" alt="Stripe Secure Payments" height="32">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Demo -->
-    <section class="interactive-demo py-5 bg-light" id="demo">
-        <div class="container">
-            <h2 class="text-center mb-5">Experience the Platform</h2>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="demo-video-container">
-                        <div class="video-placeholder bg-dark rounded-4 position-relative overflow-hidden">
-                            <div class="interaction-overlay">
-                                <div class="interaction-buttons">
-                                    <button class="btn btn-light btn-sm me-2"><i data-feather="bookmark"></i> Save</button>
-                                    <button class="btn btn-light btn-sm me-2"><i data-feather="heart"></i> Like</button>
-                                    <button class="btn btn-light btn-sm me-2"><i data-feather="share-2"></i> Share</button>
-                                    <button class="btn btn-primary btn-sm"><i data-feather="external-link"></i> Visit</button>
-                                </div>
-                            </div>
-                            <div class="verification-popup">
-                                <h5>Verify Your Engagement</h5>
-                                <p>Quick question about the video:</p>
-                                <div class="verification-options">
-                                    <button class="btn btn-outline-light mb-2 w-100">A) First Option</button>
-                                    <button class="btn btn-outline-light mb-2 w-100">B) Second Option</button>
-                                    <button class="btn btn-outline-light mb-2 w-100">C) Third Option</button>
-                                </div>
-                                <small class="text-muted">Answer correctly to earn your reward!</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="interaction-steps">
-                        <div class="step-item mb-4">
-                            <span class="step-number">1</span>
-                            <h4>Watch & Interact</h4>
-                            <p>Engage with targeted content through likes, shares, and bookmarks.</p>
-                        </div>
-                        <div class="step-item mb-4">
-                            <span class="step-number">2</span>
-                            <h4>Verify Understanding</h4>
-                            <p>Answer simple questions to confirm your attention and earn rewards.</p>
-                        </div>
-                        <div class="step-item mb-4">
-                            <span class="step-number">3</span>
-                            <h4>Complete Surveys</h4>
-                            <p>Provide valuable feedback to advertisers for additional earnings.</p>
-                        </div>
-                        <div class="step-item">
-                            <span class="step-number">4</span>
-                            <h4>Instant Rewards</h4>
-                            <p>Earn money directly to your wallet after successful engagement.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Signals -->
-    <section class="trust-signals py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Your Privacy & Security</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="text-center">
-                        <i data-feather="shield" class="mb-3" style="width: 48px; height: 48px;"></i>
-                        <h3>Secure Verification</h3>
-                        <p>Identity verification through secure channels while maintaining privacy</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="text-center">
-                        <i data-feather="lock" class="mb-3" style="width: 48px; height: 48px;"></i>
-                        <h3>Data Protection</h3>
-                        <p>GDPR and CCPA compliant with end-to-end encryption</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="text-center">
-                        <i data-feather="eye-off" class="mb-3" style="width: 48px; height: 48px;"></i>
-                        <h3>Privacy Control</h3>
-                        <p>You control what information advertisers can see</p>
-                    </div>
-                </div>
-            </div>
-            <div class="trust-badges mt-5">
-                <div class="trust-badge gdpr">
-                    <i data-feather="shield" class="me-2"></i>
-                    GDPR Compliant
-                </div>
-                <div class="trust-badge encryption">
-                    <i data-feather="lock" class="me-2"></i>
-                    End-to-End Encryption
-                </div>
-            </div>
-        </div>
     <!-- Earnings Calculator -->
     <section class="earnings-calculator py-5" id="calculator">
         <div class="container">
@@ -388,6 +134,7 @@
             </div>
         </div>
     </section>
+
     <!-- Interactive Platform Demo -->
     <section class="platform-demo py-5" id="demo">
         <div class="container">
@@ -423,6 +170,7 @@
             </div>
         </div>
     </section>
+
     <!-- Onboarding Preview -->
     <section class="onboarding-preview py-5" id="onboarding">
         <div class="container">
@@ -490,6 +238,7 @@
             </div>
         </div>
     </section>
+
     <!-- Download App -->
     <section class="download-app py-5" id="download">
         <div class="container">
