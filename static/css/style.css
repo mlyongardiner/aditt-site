@@ -178,6 +178,68 @@ body {
     width: 20px;
     height: 20px;
     color: var(--primary-color);
+/* Earnings Calculator */
+.earnings-calculator {
+    background: var(--light);
+}
+
+.calculator-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.calculator-input {
+    margin-bottom: 2rem;
+}
+
+.form-range {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.form-range::-webkit-slider-thumb {
+    background: var(--primary-color);
+}
+
+.earnings-display {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tier-earnings {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: var(--light);
+}
+
+.tier-earnings.premium {
+    background: var(--primary-color);
+    color: white;
+}
+
+.tier-earnings h4 {
+    margin-bottom: 1rem;
+}
+
+.earnings-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.earnings-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.earnings-benefits i {
+    color: var(--primary-color);
+}
 }
 
 /* Animations */

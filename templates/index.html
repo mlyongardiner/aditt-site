@@ -340,6 +340,54 @@
                 </div>
             </div>
         </div>
+    <!-- Earnings Calculator -->
+    <section class="earnings-calculator py-5" id="calculator">
+        <div class="container">
+            <h2 class="text-center mb-5">Calculate Your Potential Earnings</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="calculator-card">
+                        <div class="calculator-input">
+                            <label for="hoursSlider" class="form-label">
+                                Hours per week watching ads: <span id="rateDisplay">0</span>
+                            </label>
+                            <input type="range" class="form-range" id="hoursSlider" min="0" max="40" value="10">
+                        </div>
+                        <div class="earnings-display">
+                            <div class="tier-earnings free">
+                                <h4>Free Tier</h4>
+                                <p>Estimated earnings: <span id="freeEarnings">$0</span></p>
+                            </div>
+                            <div class="tier-earnings premium">
+                                <h4>Premium Tier</h4>
+                                <p>Estimated earnings: <span id="premiumEarnings">$0</span></p>
+                                <small class="text-muted">3x earning multiplier</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="earnings-info">
+                        <h3>Maximize Your Earnings</h3>
+                        <ul class="earnings-benefits">
+                            <li>
+                                <i data-feather="check-circle"></i>
+                                <span>Get paid for every verified view</span>
+                            </li>
+                            <li>
+                                <i data-feather="check-circle"></i>
+                                <span>Earn 3x more with Premium membership</span>
+                            </li>
+                            <li>
+                                <i data-feather="check-circle"></i>
+                                <span>Weekly payouts via Stripe</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </section>
     <!-- Onboarding Preview -->
     <section class="onboarding-preview py-5" id="onboarding">
