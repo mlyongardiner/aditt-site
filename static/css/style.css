@@ -1,15 +1,67 @@
 :root {
     --primary-color: #4A90E2;
-    --secondary-color: #E24A90;
-    --dark: #2C3E50;
-    --light: #F5F6FA;
+    --secondary-color: #2D9CDB;
+    --accent-color: #F2994A;
+    --dark: #333333;
+    --light: #FFFFFF;
+    --background: #F6F8FB;
+    --gray-100: #F8F9FA;
+    --gray-200: #E9ECEF;
+    --gray-300: #DEE2E6;
+    --gray-400: #CED4DA;
+    --gray-500: #ADB5BD;
+    --gray-600: #6C757D;
+    --gray-700: #495057;
+    --gray-800: #343A40;
+    --gray-900: #212529;
+    --blue-light: #E3F2FD;
+    --blue-medium: #90CAF9;
+    --blue-dark: #2196F3;
+    --success: #27AE60;
+    --warning: #E2B93B;
+    --error: #EB5757;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: var(--dark);
     overflow-x: hidden;
-    padding-top: 76px;
+    padding-top: 80px;
+    background-color: var(--background);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+    margin-bottom: 1.5rem;
 }
 
 /* Navigation */
@@ -32,7 +84,7 @@ body {
 /* Hero Section */
 .hero {
     min-height: calc(100vh - 76px);
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, var(--indigo-500) 0%, var(--pink-500) 100%);
     position: relative;
     padding: 4rem 0;
 }
@@ -94,7 +146,7 @@ body {
 /* Calculator Section */
 .calculator {
     padding: 4rem 0;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(45deg, var(--indigo-500), var(--pink-500));
     color: white;
 }
 
@@ -141,7 +193,7 @@ body {
 }
 
 .trust-signals i {
-    color: var(--primary-color);
+    color: var(--indigo-500);
 }
 
 .trust-signals h3 {
@@ -177,7 +229,9 @@ body {
 .trust-badge i {
     width: 20px;
     height: 20px;
-    color: var(--primary-color);
+    color: var(--indigo-500);
+}
+
 /* Earnings Calculator */
 .earnings-calculator {
     background: var(--light);
@@ -239,7 +293,6 @@ body {
 
 .earnings-benefits i {
     color: var(--primary-color);
-}
 }
 
 /* Animations */
