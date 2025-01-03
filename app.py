@@ -19,7 +19,7 @@ handler.setFormatter(logging.Formatter(
 logger.addHandler(handler)
 
 # Initialize Flask app
-app = Flask(__name__, static_folder='static', template_folder='templates')
+app = Flask(__name__)
 app.config.update(
     SEND_FILE_MAX_AGE_DEFAULT=0,
     TEMPLATES_AUTO_RELOAD=True,
@@ -39,7 +39,7 @@ def index():
 def serve_static(filename):
     try:
         logger.info(f"Serving static file: {filename}")
-        return send_from_directory(app.static_folder, filename)
+        return send_from_directory('static', filename)
     except Exception as e:
         logger.error(f"Error serving static file {filename}: {str(e)}")
         return "File not found", 404
@@ -50,6 +50,4 @@ def add_header(response):
     return response
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 3000))
-    logger.info(f"Starting Flask application on port {port}")
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=3000, debug=True)
