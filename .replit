@@ -31,8 +31,6 @@ args = "python main.py"
 waitForPort = 3000
 
 [deployment]
-deploymentTarget = "static"
-publicDir = "/"
 run = ["sh", "-c", "python main.py"]
 
 [[ports]]
