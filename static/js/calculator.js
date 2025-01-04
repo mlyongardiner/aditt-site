@@ -5,8 +5,8 @@ class EarningsCalculator {
         this.freeEarnings = document.getElementById('freeEarnings');
         this.premiumEarnings = document.getElementById('premiumEarnings');
         this.ratePerHour = {
-            free: 12,     // $12 per hour for free users
-            premium: 36   // $36 per hour for premium users
+            free: 5,     // $5 per hour for free users
+            premium: 15   // $15 per hour for premium users
         };
         this.initialize();
     }

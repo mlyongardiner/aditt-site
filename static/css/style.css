@@ -1,46 +1,55 @@
 :root {
-    --primary-color: #ABFFD2;
-    --secondary-color: #1564FF;
-    --dark: #000000;
+    --primary-color: #4A90E2;
+    --secondary-color: #E24A90;
+    --dark: #2C3E50;
     --light: #F5F6FA;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    color: var(--light);
+    color: var(--dark);
     overflow-x: hidden;
     padding-top: 76px;
-    background: var(--dark);
 }
 
+/* Navigation */
 .navbar {
-    background: var(--dark);
+    background: rgba(74, 144, 226, 0.98);
     backdrop-filter: blur(10px);
     padding: 1rem 0;
-    border-bottom: 1px solid var(--primary-color);
 }
 
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+}
+
+/* Hero Section */
 .hero {
     min-height: calc(100vh - 76px);
-    background: var(--dark);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     position: relative;
     padding: 4rem 0;
 }
 
 .hero-content {
-    color: var(--light);
+    padding: 2rem 0;
 }
 
 .hero-split {
     position: relative;
     overflow: hidden;
     padding: 2.5rem;
-    background: var(--dark);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 1.5rem;
     transition: transform 0.3s ease;
-    border: 1px solid var(--primary-color);
-    color: var(--light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-split:hover {
@@ -57,59 +66,55 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--light);
+    color: white;
 }
 
 .feature-item i {
-    color: var(--primary-color);
+    color: var(--light);
 }
 
+/* Features Section */
 .features {
     padding: 6rem 0;
-    background: var(--dark);
-    color: var(--light);
+    background: var(--light);
 }
 
 .feature-card {
     padding: 2rem;
     border-radius: 1rem;
-    background: var(--dark);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    color: var(--light);
-    border: 1px solid var(--primary-color);
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
 }
 
+/* Calculator Section */
 .calculator {
     padding: 4rem 0;
-    background: var(--dark);
-    color: var(--light);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
 }
 
 .calculator-widget {
-    background: var(--dark);
+    background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 1rem;
     backdrop-filter: blur(10px);
-    border: 1px solid var(--primary-color);
 }
 
 .earnings-box {
     padding: 1.5rem;
     border-radius: 0.75rem;
-    background: var(--dark);
+    background: rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease;
-    color: var(--light);
-    border: 1px solid var(--primary-color);
 }
 
 .earnings-box.premium {
-    background: var(--dark);
-    border: 2px solid var(--primary-color);
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     transform: scale(1.05);
 }
 
@@ -118,109 +123,303 @@ body {
     font-weight: 600;
     display: block;
     margin: 0.5rem 0;
-    color: var(--light);
+}
+
+/* Video Demo */
+.video-demo {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+/* Trust Signals */
+.trust-signals {
+    background: var(--light);
+}
+
+.trust-signals i {
+    color: var(--primary-color);
+}
+
+.trust-signals h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.trust-badge:hover {
+    transform: translateY(-2px);
+}
+
+.trust-badge i {
+    width: 20px;
+    height: 20px;
+    color: var(--primary-color);
+/* Earnings Calculator */
+.earnings-calculator {
+    background: var(--light);
+}
+
+.calculator-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.calculator-input {
+    margin-bottom: 2rem;
+}
+
+.form-range {
+    width: 100%;
+    margin-top: 1rem;
 }
 
 .form-range::-webkit-slider-thumb {
     background: var(--primary-color);
 }
 
-.earnings-comparison {
-    background: var(--dark);
+.earnings-display {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tier-earnings {
     padding: 1.5rem;
-    border-radius: 1rem;
-    border: 1px solid var(--primary-color);
-}
-
-/* Button Styles */
-.btn-primary {
-    background: var(--secondary-color);
-    color: var(--light);
-    border: none;
-}
-
-.btn-primary:hover {
-    background: var(--secondary-color);
-    opacity: 0.9;
-}
-
-.btn-outline-primary {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-}
-
-.btn-outline-primary:hover {
-    background: var(--primary-color);
-    color: var(--dark);
-}
-
-.btn-light {
-    background: var(--secondary-color);
-    color: var(--light);
-    border: none;
-}
-
-.btn-outline-light {
-    border-color: var(--light);
-    color: var(--light);
-}
-
-.btn-outline-light:hover {
+    border-radius: 0.5rem;
     background: var(--light);
-    color: var(--dark);
 }
 
-/* Updated sections with consistent dark theme */
-.premium {
-    background: var(--dark);
-    color: var(--light);
+.tier-earnings.premium {
+    background: var(--primary-color);
+    color: white;
 }
 
-.card {
-    background: var(--dark);
-    border: 1px solid var(--primary-color);
-    color: var(--light);
+.tier-earnings h4 {
+    margin-bottom: 1rem;
 }
 
-.trust-signals {
-    background: var(--dark);
-    color: var(--light);
+.earnings-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
 }
 
-.trust-badge {
-    background: var(--dark);
-    border: 1px solid var(--primary-color);
-    color: var(--light);
+.earnings-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.trust-badge i {
+.earnings-benefits i {
     color: var(--primary-color);
 }
+}
 
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Interactive Demo */
+.demo-video-container {
+    position: relative;
+    aspect-ratio: 16/9;
+    margin-bottom: 2rem;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    background: linear-gradient(45deg, #2C3E50, #3498db);
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.interaction-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+.verification-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 80%;
+    color: white;
+    text-align: center;
+    z-index: 3;
+    display: none;
+}
+
+.verification-popup.show {
+    display: block;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    padding-left: 4rem;
+}
+
+.step-number {
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.interaction-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.interaction-buttons .btn {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.interaction-buttons .btn i {
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive Design */
+/* Onboarding Preview */
 .onboarding-preview {
-    background: var(--dark);
+    background: var(--light);
+}
+
+.onboarding-steps {
+    position: relative;
+    padding: 2rem;
 }
 
 .onboarding-step {
-    background: var(--dark);
-    border: 1px solid var(--primary-color);
-    color: var(--light);
+    position: relative;
+    padding: 2rem;
+    padding-left: 4rem;
+    background: white;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.onboarding-step:hover {
+    transform: translateX(10px);
+}
+
+.onboarding-step.active {
+    border: 2px solid var(--primary-color);
+}
+
+.step-indicator {
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .interest-tag {
+    padding: 0.5rem 1rem;
     border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border-radius: 2rem;
     background: transparent;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .interest-tag[data-active="true"] {
     background: var(--primary-color);
-    color: var(--dark);
+    color: white;
 }
 
 .phone-mockup {
-    background: var(--dark);
-    border: 1px solid var(--primary-color);
+    background: white;
     border-radius: 2rem;
     padding: 1rem;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
@@ -229,136 +428,15 @@ body {
 }
 
 .phone-screen {
-    background: var(--dark);
+    background: var(--light);
     border-radius: 1.5rem;
     padding: 1.5rem;
     min-height: 500px;
-    color: var(--light);
-}
-
-.download-app {
-    background: var(--dark);
-    color: var(--light);
-}
-
-.qr-section {
-    background: var(--dark);
-    border: 1px solid var(--primary-color);
-    border-radius: 1rem;
-    padding: 3rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    color: var(--light);
-}
-
-.step-item {
-    background: var(--dark);
-    color: var(--light);
-    border: 1px solid var(--primary-color);
-}
-
-.verification-popup {
-    background: rgba(0, 0, 0, 0.95);
-    color: var(--light);
-}
-
-.interest-item {
-    background: var(--dark);
-    border: 1px solid var(--primary-color);
-    color: var(--light);
-}
-
-.interest-item.selected {
-    background: var(--primary-color);
-    color: var(--dark);
-}
-
-.interest-item i {
-    color: var(--primary-color);
-}
-
-/* Maintaining responsiveness */
-@media (max-width: 768px) {
-    .hero-content {
-        padding: 3rem 0;
-    }
-    .hero-split {
-        margin-bottom: 2rem;
-    }
-}
-
-.app-badges {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    color: var(--light);
-}
-
-.app-badge {
-    background: var(--dark);
-    color: var(--light);
-    transition: transform 0.3s ease;
-}
-
-.app-badge:hover {
-    transform: translateY(-5px);
-}
-
-.qr-code {
-    color: var(--primary-color);
-}
-
-.qr-code p {
-    color: var(--light);
-    font-weight: 500;
-}
-
-.stripe-badge {
-    background: var(--dark);
-    border-radius: 4px;
-    padding: 8px 16px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--light);
-}
-
-.earnings-calculator {
-    background: var(--dark);
-}
-
-.calculator-card {
-    background: var(--dark);
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    color: var(--light);
-}
-
-.tier-earnings {
-    background: var(--dark);
-}
-
-.tier-earnings.premium {
-    background: var(--primary-color);
-    color: var(--dark);
-}
-
-.video-placeholder {
-    background: linear-gradient(45deg, var(--dark), #1a1a1a);
-}
-
-.interaction-overlay {
-    background: rgba(0, 0, 0, 0.75);
-}
-
-.demo-video-container {
-    background: var(--dark);
 }
 
 .interests-demo {
     text-align: center;
     padding: 2rem 1rem;
-    color: var(--light);
 }
 
 .demo-interests-grid {
@@ -369,7 +447,7 @@ body {
 }
 
 .interest-item {
-    background: var(--dark);
+    background: white;
     border-radius: 1rem;
     padding: 1rem;
     display: flex;
@@ -378,13 +456,11 @@ body {
     gap: 0.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: var(--light);
-    border: 1px solid var(--primary-color);
 }
 
 .interest-item.selected {
     background: var(--primary-color);
-    color: var(--dark);
+    color: white;
 }
 
 .interest-item.selected i {
@@ -396,47 +472,60 @@ body {
     height: 24px;
     color: var(--primary-color);
 }
-
 @media (max-width: 768px) {
     .hero-content {
         padding: 3rem 0;
     }
+    
     .hero-split {
         margin-bottom: 2rem;
     }
 }
-
-.trust-signals i{
-    color: var(--secondary-color);
+/* Download App Section */
+.download-app {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2563eb 100%);
+    color: white;
 }
 
-.trust-signals h3{
-    color: var(--light);
+.app-badges {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-.trust-badge:hover {
-    border-color: var(--primary-color);
+.app-badge {
+    transition: transform 0.3s ease;
 }
 
-.trust-badge i {
+.app-badge:hover {
+    transform: translateY(-5px);
+}
+
+.qr-section {
+    background: white;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.qr-code {
     color: var(--primary-color);
 }
 
-.onboarding-step:hover {
-    transform: translateX(10px);
-    border-color: var(--primary-color);
+.qr-code p {
+    color: var(--text-color);
+    font-weight: 500;
+}
+.stripe-badge {
+    background: white;
+    border-radius: 4px;
+    padding: 8px 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: inline-block;
+    margin-top: 1rem;
 }
 
-.onboarding-step.active {
-    border: 2px solid var(--primary-color);
-}
-
-.step-indicator {
-    background: var(--primary-color);
-    color: var(--dark);
-}
-
-.interest-tag[data-active="true"] {
-    background: var(--primary-color);
-    color: var(--dark);
+.stripe-badge img {
+    height: 32px;
+    width: auto;
 }
