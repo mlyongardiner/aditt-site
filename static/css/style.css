@@ -7,45 +7,40 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    color: var(--dark);
+    color: var(--light);
     overflow-x: hidden;
     padding-top: 76px;
+    background: var(--dark);
 }
 
-/* Navigation */
 .navbar {
-    background: rgba(21, 100, 255, 0.98);
+    background: var(--secondary-color);
     backdrop-filter: blur(10px);
     padding: 1rem 0;
     color: var(--light);
 }
 
-/* Hero Section */
 .hero {
     min-height: calc(100vh - 76px);
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: var(--dark);
     position: relative;
     padding: 4rem 0;
 }
 
 .hero-content {
-    color: var(--dark);
+    color: var(--light);
 }
 
 .hero-split {
     position: relative;
     overflow: hidden;
     padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(171, 255, 210, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 1.5rem;
     transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--dark);
-}
-
-.hero-split:hover {
-    transform: translateY(-5px);
+    border: 1px solid var(--primary-color);
+    color: var(--light);
 }
 
 .features-preview {
@@ -58,56 +53,81 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--dark);
+    color: var(--light);
 }
 
 .feature-item i {
-    color: var(--dark);
+    color: var(--primary-color);
 }
 
-/* Features Section */
 .features {
     padding: 6rem 0;
-    background: var(--light);
+    background: var(--dark);
+    color: var(--light);
 }
 
 .feature-card {
     padding: 2rem;
     border-radius: 1rem;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: rgba(171, 255, 210, 0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
+    color: var(--light);
+    border: 1px solid var(--primary-color);
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
+    background: rgba(171, 255, 210, 0.1);
 }
 
-/* Calculator Section */
 .calculator {
     padding: 4rem 0;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    background: var(--dark);
     color: var(--light);
 }
 
 .calculator-widget {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(171, 255, 210, 0.05);
     padding: 2rem;
     border-radius: 1rem;
     backdrop-filter: blur(10px);
+    border: 1px solid var(--primary-color);
 }
 
 .earnings-box {
     padding: 1.5rem;
     border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(171, 255, 210, 0.05);
     transition: transform 0.3s ease;
+    color: var(--light);
 }
 
 .earnings-box.premium {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(171, 255, 210, 0.1);
+    border: 2px solid var(--primary-color);
     transform: scale(1.05);
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: var(--light);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    opacity: 0.9;
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-color);
+    color: var(--dark);
 }
 
 .earnings-amount {
@@ -117,7 +137,6 @@ body {
     margin: 0.5rem 0;
 }
 
-/* Video Demo */
 .video-demo {
     position: relative;
     padding-bottom: 56.25%;
@@ -127,9 +146,9 @@ body {
     border-radius: 1rem;
 }
 
-/* Trust Signals */
 .trust-signals {
-    background: var(--light);
+    background: var(--dark);
+    color: var(--light);
 }
 
 .trust-signals i {
@@ -152,18 +171,21 @@ body {
 
 .trust-badge {
     padding: 0.75rem 1.5rem;
-    background: white;
+    background: rgba(171, 255, 210, 0.05);
     border-radius: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
     gap: 0.75rem;
     font-weight: 500;
     transition: transform 0.2s ease;
+    color: var(--light);
+    border: 1px solid rgba(171, 255, 210, 0.1);
 }
 
 .trust-badge:hover {
     transform: translateY(-2px);
+    border-color: var(--primary-color);
 }
 
 .trust-badge i {
@@ -171,7 +193,7 @@ body {
     height: 20px;
     color: var(--secondary-color);
 }
-/* Earnings Calculator */
+
 .earnings-calculator {
     background: var(--light);
 }
@@ -234,7 +256,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Animations */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -246,7 +267,6 @@ body {
     transform: translateY(0);
 }
 
-/* Interactive Demo */
 .demo-video-container {
     position: relative;
     aspect-ratio: 16/9;
@@ -257,7 +277,7 @@ body {
     width: 100%;
     height: 100%;
     min-height: 300px;
-    background: linear-gradient(45deg, #2C3E50, #3498db);
+    background: linear-gradient(45deg, var(--dark), #1a1a1a);
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
@@ -340,10 +360,8 @@ body {
     height: 16px;
 }
 
-/* Responsive Design */
-/* Onboarding Preview */
 .onboarding-preview {
-    background: var(--light);
+    background: var(--dark);
 }
 
 .onboarding-steps {
@@ -355,15 +373,18 @@ body {
     position: relative;
     padding: 2rem;
     padding-left: 4rem;
-    background: white;
+    background: rgba(171, 255, 210, 0.05);
     border-radius: 1rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
+    color: var(--light);
+    border: 1px solid rgba(171, 255, 210, 0.1);
 }
 
 .onboarding-step:hover {
     transform: translateX(10px);
+    border-color: var(--primary-color);
 }
 
 .onboarding-step.active {
@@ -411,19 +432,21 @@ body {
 }
 
 .phone-mockup {
-    background: white;
+    background: rgba(171, 255, 210, 0.05);
     border-radius: 2rem;
     padding: 1rem;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     max-width: 300px;
     margin: 0 auto;
+    border: 1px solid rgba(171, 255, 210, 0.1);
 }
 
 .phone-screen {
-    background: var(--light);
+    background: var(--dark);
     border-radius: 1.5rem;
     padding: 1.5rem;
     min-height: 500px;
+    color: var(--light);
 }
 
 .interests-demo {
@@ -439,7 +462,7 @@ body {
 }
 
 .interest-item {
-    background: white;
+    background: rgba(171, 255, 210, 0.05);
     border-radius: 1rem;
     padding: 1rem;
     display: flex;
@@ -448,11 +471,13 @@ body {
     gap: 0.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: var(--light);
+    border: 1px solid rgba(171, 255, 210, 0.1);
 }
 
 .interest-item.selected {
     background: var(--primary-color);
-    color: white;
+    color: var(--dark);
 }
 
 .interest-item.selected i {
@@ -464,16 +489,16 @@ body {
     height: 24px;
     color: var(--primary-color);
 }
+
 @media (max-width: 768px) {
     .hero-content {
         padding: 3rem 0;
     }
-    
     .hero-split {
         margin-bottom: 2rem;
     }
 }
-/* Download App Section */
+
 .download-app {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--light);
@@ -494,10 +519,12 @@ body {
 }
 
 .qr-section {
-    background: white;
+    background: rgba(171, 255, 210, 0.05);
     border-radius: 1rem;
     padding: 3rem;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    color: var(--light);
+    border: 1px solid rgba(171, 255, 210, 0.1);
 }
 
 .qr-code {
@@ -505,9 +532,10 @@ body {
 }
 
 .qr-code p {
-    color: var(--text-color);
+    color: var(--light);
     font-weight: 500;
 }
+
 .stripe-badge {
     background: white;
     border-radius: 4px;
