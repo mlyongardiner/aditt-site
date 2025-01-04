@@ -14,10 +14,10 @@ body {
 }
 
 .navbar {
-    background: var(--secondary-color);
+    background: var(--dark);
     backdrop-filter: blur(10px);
     padding: 1rem 0;
-    color: var(--light);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .hero {
@@ -41,6 +41,11 @@ body {
     transition: transform 0.3s ease;
     border: 1px solid var(--primary-color);
     color: var(--light);
+}
+
+.hero-split:hover {
+    transform: translateY(-5px);
+    background: rgba(171, 255, 210, 0.08);
 }
 
 .features-preview {
@@ -109,6 +114,7 @@ body {
     transform: scale(1.05);
 }
 
+/* Button Styles */
 .btn-primary {
     background: var(--secondary-color);
     color: var(--light);
@@ -130,6 +136,85 @@ body {
     color: var(--dark);
 }
 
+.btn-light {
+    background: var(--secondary-color);
+    color: var(--light);
+    border: none;
+}
+
+.btn-outline-light {
+    border-color: var(--light);
+    color: var(--light);
+}
+
+.btn-outline-light:hover {
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* Rest of the styling components with updated colors */
+.premium {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.trust-signals {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.trust-badge {
+    background: rgba(171, 255, 210, 0.05);
+    border: 1px solid var(--primary-color);
+    color: var(--light);
+}
+
+.trust-badge i {
+    color: var(--primary-color);
+}
+
+.onboarding-preview {
+    background: var(--dark);
+}
+
+.onboarding-step {
+    background: rgba(171, 255, 210, 0.05);
+    border: 1px solid var(--primary-color);
+    color: var(--light);
+}
+
+.interest-tag {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.interest-tag[data-active="true"] {
+    background: var(--primary-color);
+    color: var(--dark);
+}
+
+.phone-mockup {
+    background: rgba(171, 255, 210, 0.05);
+    border: 1px solid var(--primary-color);
+}
+
+.phone-screen {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.download-app {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.qr-section {
+    background: rgba(171, 255, 210, 0.05);
+    border: 1px solid var(--primary-color);
+    color: var(--light);
+}
+
 .earnings-amount {
     font-size: 1.75rem;
     font-weight: 600;
@@ -144,11 +229,6 @@ body {
     overflow: hidden;
     max-width: 100%;
     border-radius: 1rem;
-}
-
-.trust-signals {
-    background: var(--dark);
-    color: var(--light);
 }
 
 .trust-signals i {
@@ -169,19 +249,6 @@ body {
     flex-wrap: wrap;
 }
 
-.trust-badge {
-    padding: 0.75rem 1.5rem;
-    background: rgba(171, 255, 210, 0.05);
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-weight: 500;
-    transition: transform 0.2s ease;
-    color: var(--light);
-    border: 1px solid rgba(171, 255, 210, 0.1);
-}
 
 .trust-badge:hover {
     transform: translateY(-2px);
@@ -191,7 +258,7 @@ body {
 .trust-badge i {
     width: 20px;
     height: 20px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .earnings-calculator {
@@ -360,10 +427,6 @@ body {
     height: 16px;
 }
 
-.onboarding-preview {
-    background: var(--dark);
-}
-
 .onboarding-steps {
     position: relative;
     padding: 2rem;
@@ -415,17 +478,6 @@ body {
     margin-top: 1rem;
 }
 
-.interest-tag {
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--primary-color);
-    border-radius: 2rem;
-    background: transparent;
-    color: var(--primary-color);
-    font-weight: 500;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
 .interest-tag[data-active="true"] {
     background: var(--primary-color);
     color: white;
@@ -438,7 +490,7 @@ body {
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     max-width: 300px;
     margin: 0 auto;
-    border: 1px solid rgba(171, 255, 210, 0.1);
+    border: 1px solid var(--primary-color);
 }
 
 .phone-screen {
@@ -472,7 +524,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     color: var(--light);
-    border: 1px solid rgba(171, 255, 210, 0.1);
+    border: 1px solid var(--primary-color);
 }
 
 .interest-item.selected {
@@ -500,7 +552,7 @@ body {
 }
 
 .download-app {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: var(--dark);
     color: var(--light);
 }
 
@@ -524,7 +576,7 @@ body {
     padding: 3rem;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     color: var(--light);
-    border: 1px solid rgba(171, 255, 210, 0.1);
+    border: 1px solid var(--primary-color);
 }
 
 .qr-code {
