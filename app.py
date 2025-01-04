@@ -10,7 +10,11 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Initialize Flask app
-app = Flask(__name__)
+app = Flask(__name__, 
+    static_url_path='/static',
+    static_folder='static',
+    template_folder='templates'
+)
 
 @app.route('/')
 def index():
@@ -31,7 +35,11 @@ def serve_static(filename):
         return f"Error serving static file: {str(e)}", 404
 
 if __name__ == '__main__':
-    # Get port from environment variable or default to 3000
-    port = int(os.environ.get('PORT', 3000))
-    logger.info(f"Starting Flask application on port {port}")
-    app.run(host='0.0.0.0', port=port, debug=False)  # Set debug=False for deployment
+    try:
+        # Get port from environment variable or default to 3000
+        port = int(os.environ.get('PORT', 3000))
+        logger.info(f"Starting Flask application on port {port}")
+        app.run(host="0.0.0.0", port=port, debug=True)
+    except Exception as e:
+        logger.error(f"Failed to start Flask application: {str(e)}")
+        raise
