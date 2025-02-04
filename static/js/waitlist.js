@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const validatePhone = (phone) => {
-        // Allows formats: (123) 456-7890, 123-456-7890, 1234567890
         const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
         return phoneRegex.test(phone);
     };
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     waitlistForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Get form data
         const formData = {
             firstName: document.getElementById('firstName').value.trim(),
             lastName: document.getElementById('lastName').value.trim(),
@@ -25,19 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
             phone: document.getElementById('phone').value.trim()
         };
 
-        // Field validation
         if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone) {
             alert('Please fill in all fields');
             return;
         }
 
-        // Email validation
         if (!validateEmail(formData.email)) {
             alert('Please enter a valid email address');
             return;
         }
 
-        // Phone validation
         if (!validatePhone(formData.phone)) {
             alert('Please enter a valid phone number (e.g., (123) 456-7890 or 1234567890)');
             return;
@@ -58,20 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(result.error || 'Failed to submit');
             }
             
-            // Clear form and show success message
             waitlistForm.reset();
             modal.hide();
-        
-        // Show success message
-        const successAlert = document.createElement('div');
-        successAlert.className = 'alert alert-success fixed-top m-3';
-        successAlert.role = 'alert';
-        successAlert.innerHTML = 'Thanks for joining our waitlist! We\'ll be in touch soon.';
-        document.body.appendChild(successAlert);
 
-        // Remove the alert after 5 seconds
-        setTimeout(() => {
-            successAlert.remove();
-        }, 5000);
+            const successAlert = document.createElement('div');
+            successAlert.className = 'alert alert-success fixed-top m-3';
+            successAlert.role = 'alert';
+            successAlert.innerHTML = 'Thanks for joining our waitlist! We\'ll be in touch soon.';
+            document.body.appendChild(successAlert);
+
+            setTimeout(() => {
+                successAlert.remove();
+            }, 5000);
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to submit: ' + error.message);
+        }
     });
 });
