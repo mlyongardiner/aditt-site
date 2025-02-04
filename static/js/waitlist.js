@@ -3,6 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const waitlistForm = document.getElementById('waitlistForm');
     const modal = new bootstrap.Modal(document.getElementById('waitlistModal'));
 
+    const validateEmail = (email) => {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return emailRegex.test(email);
+    };
+
+    const validatePhone = (phone) => {
+        // Allows formats: (123) 456-7890, 123-456-7890, 1234567890
+        const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        return phoneRegex.test(phone);
+    };
+
     waitlistForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
@@ -14,16 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
             phone: document.getElementById('phone').value.trim()
         };
 
-        // Basic validation
+        // Field validation
         if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone) {
             alert('Please fill in all fields');
             return;
         }
 
         // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(formData.email)) {
+        if (!validateEmail(formData.email)) {
             alert('Please enter a valid email address');
+            return;
+        }
+
+        // Phone validation
+        if (!validatePhone(formData.phone)) {
+            alert('Please enter a valid phone number (e.g., (123) 456-7890 or 1234567890)');
             return;
         }
 
