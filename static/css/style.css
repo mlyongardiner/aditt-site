@@ -561,3 +561,50 @@ body {
 .announcement-text i {
     color: #ABFFD2;
 }
+/* Success Animation Styles */
+.success-animation {
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    background: #fff;
+}
+
+.success-checkmark {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.check-icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-line {
+    background-color: #fff;
+    height: 3px;
+    position: absolute;
+    border-radius: 2px;
+}
+
+.line-tip {
+    width: 12px;
+    transform: rotate(45deg);
+    left: 10px;
+    top: 22px;
+}
+
+.line-long {
+    width: 22px;
+    transform: rotate(-45deg);
+    right: 8px;
+    top: 22px;
+}

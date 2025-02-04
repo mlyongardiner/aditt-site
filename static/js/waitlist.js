@@ -56,14 +56,43 @@ document.addEventListener('DOMContentLoaded', () => {
             waitlistForm.reset();
             modal.hide();
 
+            // Create success alert with animation
             const successAlert = document.createElement('div');
-            successAlert.className = 'alert alert-success fixed-top m-3';
+            successAlert.className = 'alert alert-success fixed-top m-3 success-animation';
             successAlert.role = 'alert';
-            successAlert.innerHTML = 'Thanks for joining our waitlist! We\'ll be in touch soon.';
+            successAlert.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <div class="success-checkmark me-3">
+                        <div class="check-icon">
+                            <span class="icon-line line-tip"></span>
+                            <span class="icon-line line-long"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="alert-heading mb-1">Success!</h4>
+                        <p class="mb-0">Thanks for joining our waitlist! We'll be in touch soon.</p>
+                    </div>
+                </div>
+            `;
             document.body.appendChild(successAlert);
 
+            // Animate alert entrance
+            gsap.from(successAlert, {
+                y: -100,
+                opacity: 0,
+                duration: 0.5,
+                ease: "back.out"
+            });
+
+            // Remove alert after delay
             setTimeout(() => {
-                successAlert.remove();
+                gsap.to(successAlert, {
+                    y: -100,
+                    opacity: 0,
+                    duration: 0.5,
+                    ease: "power2.in",
+                    onComplete: () => successAlert.remove()
+                });
             }, 5000);
         } catch (error) {
             console.error('Error:', error);
