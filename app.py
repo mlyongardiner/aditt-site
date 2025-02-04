@@ -28,6 +28,10 @@ with app.app_context():
 def index():
     try:
         logger.info("Rendering index page")
+        return render_template('index.html')
+    except Exception as e:
+        logger.error(f"Error rendering index page: {str(e)}")
+        return f"Error: {str(e)}", 500
 
 @app.route('/api/waitlist', methods=['POST'])
 def submit_waitlist():
@@ -45,11 +49,6 @@ def submit_waitlist():
     except Exception as e:
         logger.error(f"Error in waitlist submission: {str(e)}")
         return jsonify({'error': str(e)}), 400
-
-        return render_template('index.html')
-    except Exception as e:
-        logger.error(f"Error rendering index page: {str(e)}")
-        return f"Error: {str(e)}", 500
 
 @app.route('/static/<path:filename>')
 def serve_static(filename):
