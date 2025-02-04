@@ -1,4 +1,5 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, request, jsonify
+from models import db, WaitlistSubmission
 import logging
 import os
 
@@ -12,10 +13,39 @@ logger = logging.getLogger(__name__)
 # Initialize Flask app
 app = Flask(__name__)
 
+# Database configuration
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///waitlist.db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Initialize database
+db.init_app(app)
+
+# Create tables
+with app.app_context():
+    db.create_all()
+
 @app.route('/')
 def index():
     try:
         logger.info("Rendering index page")
+
+@app.route('/api/waitlist', methods=['POST'])
+def submit_waitlist():
+    try:
+        data = request.json
+        submission = WaitlistSubmission(
+            first_name=data['firstName'],
+            last_name=data['lastName'],
+            email=data['email'],
+            phone=data['phone']
+        )
+        db.session.add(submission)
+        db.session.commit()
+        return jsonify({'message': 'Successfully joined waitlist!'}), 200
+    except Exception as e:
+        logger.error(f"Error in waitlist submission: {str(e)}")
+        return jsonify({'error': str(e)}), 400
+
         return render_template('index.html')
     except Exception as e:
         logger.error(f"Error rendering index page: {str(e)}")

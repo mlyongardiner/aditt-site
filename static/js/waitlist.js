@@ -43,12 +43,24 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Here you would typically send the data to your backend
-        console.log('Waitlist submission:', formData);
-        
-        // Clear form and show success message
-        waitlistForm.reset();
-        modal.hide();
+        try {
+            const response = await fetch('/api/waitlist', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            const result = await response.json();
+            
+            if (!response.ok) {
+                throw new Error(result.error || 'Failed to submit');
+            }
+            
+            // Clear form and show success message
+            waitlistForm.reset();
+            modal.hide();
         
         // Show success message
         const successAlert = document.createElement('div');
