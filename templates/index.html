@@ -37,18 +37,11 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#features"
-                                >How It Works</a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#calculator">Earnings</a>
-                        </li>
-                        <li class="nav-item">
                             <a
                                 class="nav-link btn btn-outline-light ms-2"
                                 href="#"
-                                data-bs-toggle="modal" data-bs-target="#waitlistModal"
+                                data-bs-toggle="modal"
+                                data-bs-target="#waitlistModal"
                                 >Join Waitlist</a
                             >
                         </li>
@@ -119,7 +112,12 @@
                                 </div>
                             </div>
                             <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#waitlistModal">
+                                <a
+                                    href="#"
+                                    class="btn btn-light btn-lg"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#waitlistModal"
+                                >
                                     Join Waitlist
                                 </a>
                             </div>
@@ -580,20 +578,14 @@
                         <h2 class="mb-4">Get the Aditt App</h2>
                         <p class="mb-4">Coming soon!</p>
                         <div class="app-badges">
-                            <a href="#" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#waitlistModal">
+                            <a
+                                href="#"
+                                class="btn btn-light btn-lg"
+                                data-bs-toggle="modal"
+                                data-bs-target="#waitlistModal"
+                            >
                                 Join Waitlist
                             </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="qr-section text-center">
-                            <div class="qr-code">
-                                <i
-                                    data-feather="smartphone"
-                                    style="width: 120px; height: 120px"
-                                ></i>
-                                <p class="mt-3">Scan to Download</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -614,35 +606,76 @@
     </body>
 </html>
 
-        <!-- Waitlist Modal -->
-        <div class="modal fade" id="waitlistModal" tabindex="-1" aria-labelledby="waitlistModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="waitlistModalLabel">Join Waitlist</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- Waitlist Modal -->
+<div
+    class="modal fade"
+    id="waitlistModal"
+    tabindex="-1"
+    aria-labelledby="waitlistModalLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="waitlistModalLabel">
+                    Join Waitlist
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <form id="waitlistForm">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label"
+                            >First Name</label
+                        >
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="firstName"
+                            required
+                        />
                     </div>
-                    <div class="modal-body">
-                        <form id="waitlistForm">
-                            <div class="mb-3">
-                                <label for="firstName" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="firstName" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="lastName" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="lastName" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label"
+                            >Last Name</label
+                        >
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="lastName"
+                            required
+                        />
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            required
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label"
+                            >Phone Number</label
+                        >
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="phone"
+                            required
+                        />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                </form>
             </div>
         </div>
+    </div>
+</div>
